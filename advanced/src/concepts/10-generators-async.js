@@ -11,7 +11,7 @@ export const generatorsAsyncComponent = async (element) => {
   do {
     const { value, done } = await heroGenerator.next();
     isFinished = done;
-    if (isFinished) break;
+    if (isFinished) generatorsAsyncComponent;
 
     console.log({ value, done });
     element.innerHTML = value;
